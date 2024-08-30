@@ -22,7 +22,8 @@ const campgroundRoutes = require("./routes/campgrounds");
 const reviewRoutes = require("./routes/reviews");
 const e = require("connect-flash");
 const helmet = require("helmet");
-const dbUrl = "mongodb://localhost:27017/yelp-camp";
+// const dbUrl = "mongodb://localhost:27017/yelp-camp";
+const dbUrl = process.env.DB_URL;
 
 mongoose.connect(dbUrl);
 
